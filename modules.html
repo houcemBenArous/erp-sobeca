@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules ERP SOBECA</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-industry me-2"></i><strong>ERP SOBECA</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="modules.html">Modules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="processus.html">Processus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kpi.html">KPI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="migration.html">Migration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active">Modules ERP</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">
+                        <i class="fas fa-cubes text-primary me-3"></i>Les 8 Modules ERP
+                    </h1>
+                    <p class="lead">Architecture modulaire intégrée couvrant l'ensemble du Système de Management de la Qualité ISO 9001:2015</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="stats-badge">
+                        <span class="stats-badge-number">8</span>
+                        <span class="stats-badge-label">Modules</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Content -->
+    <section class="py-5">
+        <div class="container">
+            
+            <!-- Module Selector -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Navigation :</strong> Cliquez sur un module ci-dessous pour voir ses détails complets (formulaires, workflows, règles métier)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modules Grid -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="mqa">
+                        <div class="module-selector-icon qualite">✓</div>
+                        <h5>MQA</h5>
+                        <p class="small">Management Qualité</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="cmp">
+                        <div class="module-selector-icon ventes">📊</div>
+                        <h5>CMP</h5>
+                        <p class="small">Commercial & Planning</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="mec">
+                        <div class="module-selector-icon production">⚙️</div>
+                        <h5>MEC</h5>
+                        <p class="small">Production Mécanique</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="edv">
+                        <div class="module-selector-icon etudes">📐</div>
+                        <h5>EDV</h5>
+                        <p class="small">Études & Développement</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="ags">
+                        <div class="module-selector-icon achats">📦</div>
+                        <h5>AGS</h5>
+                        <p class="small">Achats & Stock</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="grh">
+                        <div class="module-selector-icon rh">👥</div>
+                        <h5>GRH</h5>
+                        <p class="small">Ressources Humaines</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="mnt">
+                        <div class="module-selector-icon maintenance">🔧</div>
+                        <h5>MNT</h5>
+                        <p class="small">Maintenance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="module-selector-card" data-module="fin">
+                        <div class="module-selector-icon finance">💰</div>
+                        <h5>FIN</h5>
+                        <p class="small">Finance</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- Module Details Sections -->
+            
+            <!-- MQA Module -->
+            <div id="module-mqa" class="module-detail-section" style="display: none;">
+                <div class="module-header qualite">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2><i class="fas fa-check-circle me-3"></i>Management Qualité et Amélioration (MQA)</h2>
+                            <p class="lead mb-0">Module transversal — surveille et pilote tous les autres modules</p>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-primary fs-6">Module Transversal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-3">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0"><i class="fas fa-bullseye me-2"></i>Périmètre</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Gestion des non-conformités (toutes origines)</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Fiches d'Action d'Amélioration (FAA) et rapports 8D</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Planification et réalisation des audits internes</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Revue de direction annuelle</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Analyse des risques AMDEC par processus</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Gestion documentaire du SMQ (liste, diffusion, maîtrise)</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Tableau de bord KPIs (tous processus)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="fas fa-users me-2"></i>Rôles & Responsables</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Pilote :</strong> Hamdi GHEDIR (RMQ)</p>
+                                <p><strong>Référence :</strong> PCS-MQA</p>
+                                <p><strong>Acronymes clés :</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">FAA - Fiche Action Amélioration</span>
+                                    <span class="badge bg-secondary">8D - Rapport 8 Disciplines</span>
+                                    <span class="badge bg-secondary">AMDEC - Analyse Risques</span>
+                                    <span class="badge bg-secondary">AI - Audit Interne</span>
+                                    <span class="badge bg-secondary">RVD - Revue Direction</span>
+                                    <span class="badge bg-secondary">PNC - Produit Non Conforme</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-file-alt me-2"></i>Formulaires Principaux (24 formulaires)</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Code</th>
+                                                <th>Nom du Formulaire</th>
+                                                <th>Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td><strong>FOR-MQA-01</strong></td><td>Liste des documents et leurs états de révision</td><td><span class="badge bg-info">Référentiel</span></td></tr>
+                                            <tr><td><strong>FOR-MQA-02</strong></td><td>Tableaux de bord KPI (19 indicateurs)</td><td><span class="badge bg-warning">KPI</span></td></tr>
+                                            <tr><td><strong>FOR-MQA-03</strong></td><td>Plan d'action annuel</td><td><span class="badge bg-success">Planning</span></td></tr>
+                                            <tr><td><strong>FOR-MQA-08</strong></td><td>Fiche d'Action d'Amélioration (FAA)</td><td><span class="badge bg-danger">Action</span></td></tr>
+                                            <tr><td><strong>FOR-MQA-12</strong></td><td>Rapport d'audit interne</td><td><span class="badge bg-primary">Audit</span></td></tr>
+                                            <tr><td><strong>FOR-MQA-20/21</strong></td><td>Rapport 8D (8 Disciplines)</td><td><span class="badge bg-danger">8D</span></td></tr>
+                                            <tr><td><strong>FOR-MQA-22</strong></td><td>Rapport de non-conformité</td><td><span class="badge bg-danger">NC</span></td></tr>
+                                            <tr><td><strong>FOR-MQA-17/18</strong></td><td>AMDEC Processus</td><td><span class="badge bg-warning">Risques</span></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-warning">
+                                <h5 class="mb-0"><i class="fas fa-sitemap me-2"></i>Workflow Principal</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="workflow-horizontal">
+                                    <div class="workflow-h-step">
+                                        <div class="workflow-h-icon bg-danger">1</div>
+                                        <h6>Détection NC</h6>
+                                        <p class="small">Toute source (client, interne, audit, fournisseur)</p>
+                                    </div>
+                                    <div class="workflow-h-arrow">→</div>
+                                    <div class="workflow-h-step">
+                                        <div class="workflow-h-icon bg-warning">2</div>
+                                        <h6>Analyse Cause</h6>
+                                        <p class="small">5M, QQOQCP, Ishikawa</p>
+                                    </div>
+                                    <div class="workflow-h-arrow">→</div>
+                                    <div class="workflow-h-step">
+                                        <div class="workflow-h-icon bg-info">3</div>
+                                        <h6>FAA ou 8D</h6>
+                                        <p class="small">Action selon criticité</p>
+                                    </div>
+                                    <div class="workflow-h-arrow">→</div>
+                                    <div class="workflow-h-step">
+                                        <div class="workflow-h-icon bg-primary">4</div>
+                                        <h6>Mise en œuvre</h6>
+                                        <p class="small">Responsable + délai</p>
+                                    </div>
+                                    <div class="workflow-h-arrow">→</div>
+                                    <div class="workflow-h-step">
+                                        <div class="workflow-h-icon bg-success">5</div>
+                                        <h6>Vérification</h6>
+                                        <p class="small">Efficacité 0-4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CMP Module -->
+            <div id="module-cmp" class="module-detail-section" style="display: none;">
+                <div class="module-header ventes">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2><i class="fas fa-chart-line me-3"></i>Commercial et Planification (CMP)</h2>
+                            <p class="lead mb-0">Gestion des offres, commandes clients, planning et réclamations</p>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-danger fs-6">18 393 Commandes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-3">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-danger text-white">
+                                <h5 class="mb-0"><i class="fas fa-bullseye me-2"></i>Périmètre</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Création et suivi des offres commerciales</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Gestion des commandes clients</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Planification hebdomadaire de la production</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Suivi des réclamations clients</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Tableau de bord satisfaction client</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="fas fa-key me-2"></i>Informations Clés</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Numérotation Offres :</strong> D+AAAA+NNNN (préfixe D obligatoire)</p>
+                                <p><strong>Numérotation Commandes :</strong> AAAANNNN (8 chiffres)</p>
+                                <p><strong>3 KPI Commercial :</strong></p>
+                                <ul>
+                                    <li><strong>TRC</strong> - Taux Réclamations Clients (Mensuel)</li>
+                                    <li><strong>TSC</strong> - Taux Satisfaction Client (Annuel)</li>
+                                    <li><strong>TCO</strong> - Taux Conversion Offres (Trimestriel)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-file-alt me-2"></i>Formulaires Principaux (16 formulaires)</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="text-primary">Offres & Commandes</h6>
+                                        <ul class="list-unstyled">
+                                            <li><strong>FOR-CMP-01</strong> - Offre de prix client</li>
+                                            <li><strong>FOR-CMP-02</strong> - Suivi des offres</li>
+                                            <li><strong>FOR-CMP-03</strong> - Commande client</li>
+                                            <li><strong>FOR-CMP-04</strong> - Suivi respect délais</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-danger">Réclamations & Satisfaction</h6>
+                                        <ul class="list-unstyled">
+                                            <li><strong>FOR-CMP-09</strong> - Réclamation client</li>
+                                            <li><strong>FOR-CMP-12</strong> - Registre réclamations</li>
+                                            <li><strong>FOR-CMP-07</strong> - Enquête satisfaction</li>
+                                            <li><strong>FOR-CMP-08</strong> - Analyse satisfaction</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEC Module -->
+            <div id="module-mec" class="module-detail-section" style="display: none;">
+                <div class="module-header production">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2><i class="fas fa-cogs me-3"></i>Production Mécanique (MEC)</h2>
+                            <p class="lead mb-0">Ordres de fabrication, fiches suiveuses, contrôle et traçabilité</p>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-primary fs-6">NCD = OF (1:1)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-3">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0"><i class="fas fa-bullseye me-2"></i>Périmètre</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Création et suivi des Ordres de Fabrication (OF)</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Fiches suiveuses de production</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Contrôle qualité en production</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Suivi temps et machines par opération</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Traçabilité complète lot → pièce</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-warning">
+                                <h5 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Règle Métier Critique</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-warning">
+                                    <strong>RG-MEC-01 🔴 BLOQUANT</strong><br>
+                                    Relation <strong>NCD = OF stricte 1:1</strong><br>
+                                    Un NCD (Numéro Commande Client) = un seul OF<br>
+                                    Mais livraisons partielles possibles (2-3 BL par NCD)
+                                </div>
+                                <p><strong>4 KPI Production :</strong></p>
+                                <ul>
+                                    <li><strong>TNC</strong> - Taux Non-Conformité (Mensuel)</li>
+                                    <li><strong>TRD</strong> - Taux Respect Délais (Mensuel)</li>
+                                    <li><strong>EH</strong> - Efficacité Horaire (Mensuel)</li>
+                                    <li><strong>TRS</strong> - Taux Rendement Synthétique (Trimestriel)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-file-alt me-2"></i>Formulaires Principaux</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="text-primary">Production</h6>
+                                        <ul class="list-unstyled">
+                                            <li><strong>FOR-MEC-01</strong> - Ordre de Fabrication (OF)</li>
+                                            <li><strong>FOR-MEC-03</strong> - Fiche suiveuse production</li>
+                                            <li><strong>FOR-MEC-07</strong> - Programme hebdomadaire</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-warning">Contrôle</h6>
+                                        <ul class="list-unstyled">
+                                            <li><strong>FOR-MEC-04</strong> - Contrôle dimensionnel</li>
+                                            <li><strong>FOR-MEC-10</strong> - Autocontrôle opérateur</li>
+                                            <li><strong>FOR-MEC-05</strong> - Analyse NC production</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EDV, AGS, GRH, MNT, FIN modules - structure similaire -->
+            <!-- ... (autres modules à développer de la même manière) -->
+
+            <div id="no-module-selected" class="text-center py-5">
+                <i class="fas fa-hand-pointer fa-4x text-muted mb-3"></i>
+                <h4 class="text-muted">Sélectionnez un module ci-dessus pour voir ses détails</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 SOBECA - Société Ben Cheikh Abdelhakim | Kairouan, Tunisie | ISO 9001:2015</p>
+            <p class="mb-0 mt-2 small">Cahier des Charges ERP | Version 1.0</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <!-- Module Selection Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const moduleCards = document.querySelectorAll('.module-selector-card');
+            const moduleSections = document.querySelectorAll('.module-detail-section');
+            const noSelection = document.getElementById('no-module-selected');
+            
+            moduleCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const moduleId = this.dataset.module;
+                    
+                    // Remove active class from all cards
+                    moduleCards.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked card
+                    this.classList.add('active');
+                    
+                    // Hide all module sections and no-selection message
+                    moduleSections.forEach(section => section.style.display = 'none');
+                    noSelection.style.display = 'none';
+                    
+                    // Show selected module section
+                    const selectedSection = document.getElementById('module-' + moduleId);
+                    if (selectedSection) {
+                        selectedSection.style.display = 'block';
+                        
+                        // Smooth scroll to section
+                        selectedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture - ERP SOBECA</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-industry me-2"></i><strong>ERP SOBECA</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="modules.html">Modules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="processus.html">Processus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kpi.html">KPI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="migration.html">Migration</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="architecture.html">Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active">Architecture Technique</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">
+                        <i class="fas fa-project-diagram me-3"></i>Architecture & Flux de Données
+                    </h1>
+                    <p class="lead mb-0">Schéma technique global et intégrations entre modules</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="stats-badge">
+                        <span class="stats-badge-number">8</span>
+                        <span class="stats-badge-label">Modules Intégrés</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Technique -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Stack Technique</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card">
+                        <div class="tech-icon" style="background: #336791;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h5>PostgreSQL</h5>
+                        <p class="small mb-0">Base de données relationnelle</p>
+                        <span class="badge bg-success mt-2">108 Tables</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card">
+                        <div class="tech-icon" style="background: #61DAFB;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h5>Application Web</h5>
+                        <p class="small mb-0">Interface utilisateur moderne</p>
+                        <span class="badge bg-info mt-2">Responsive</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card">
+                        <div class="tech-icon" style="background: #FF6B6B;">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h5>Monnaie</h5>
+                        <p class="small mb-0">Dinar Tunisien (DT)</p>
+                        <span class="badge bg-warning mt-2">TVA 19%</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card">
+                        <div class="tech-icon" style="background: #9B59B6;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h5>Conformité</h5>
+                        <p class="small mb-0">ISO 9001:2015</p>
+                        <span class="badge bg-primary mt-2">SMQ Complet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flux Principal de Données -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Chaîne de Valeur — Flux Principal</h2>
+            
+            <div class="value-chain">
+                <!-- Client -->
+                <div class="value-chain-start">
+                    <i class="fas fa-user-tie fa-3x text-primary"></i>
+                    <h5 class="mt-2">CLIENT</h5>
+                </div>
+
+                <div class="value-chain-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- CMP -->
+                <div class="value-chain-module" style="border-color: #e74c3c;">
+                    <div class="value-chain-module-header" style="background: #e74c3c;">
+                        <i class="fas fa-chart-line me-2"></i>CMP — Commercial
+                    </div>
+                    <div class="value-chain-module-body">
+                        <ul class="mb-0">
+                            <li>Demande d'offre / Commande</li>
+                            <li>Devis (offre de prix)</li>
+                            <li>Confirmation commande</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="value-chain-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- EDV -->
+                <div class="value-chain-module" style="border-color: #3498db;">
+                    <div class="value-chain-module-header" style="background: #3498db;">
+                        <i class="fas fa-drafting-compass me-2"></i>EDV — Études
+                    </div>
+                    <div class="value-chain-module-body">
+                        <ul class="mb-0">
+                            <li>Étude technique + faisabilité</li>
+                            <li>Calcul prix de revient</li>
+                            <li>Fiche technique + Gamme</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="value-chain-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- MEC -->
+                <div class="value-chain-module" style="border-color: #2ecc71;">
+                    <div class="value-chain-module-header" style="background: #2ecc71;">
+                        <i class="fas fa-cogs me-2"></i>MEC — Production
+                    </div>
+                    <div class="value-chain-module-body">
+                        <ul class="mb-0">
+                            <li>Ordre de Fabrication (OF)</li>
+                            <li>Suivi temps/poste/opérateur</li>
+                            <li>Auto-contrôle + Contrôle final</li>
+                        </ul>
+                        <div class="value-chain-side-arrow">
+                            <span>→ AGS (Achats/Stock)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-chain-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- Livraison -->
+                <div class="value-chain-module" style="border-color: #f39c12;">
+                    <div class="value-chain-module-header" style="background: #f39c12;">
+                        <i class="fas fa-truck me-2"></i>Livraison & Facturation
+                    </div>
+                    <div class="value-chain-module-body">
+                        <ul class="mb-0">
+                            <li>Bon de Livraison (BL)</li>
+                            <li>Facture client</li>
+                            <li>Suivi règlements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="value-chain-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- Retour Client -->
+                <div class="value-chain-end">
+                    <i class="fas fa-smile fa-3x text-success"></i>
+                    <h5 class="mt-2">Client Satisfait</h5>
+                    <small class="text-muted">KPI : TSC (Taux Satisfaction Client)</small>
+                </div>
+            </div>
+
+            <!-- Module Transversal MQA -->
+            <div class="mt-5">
+                <div class="alert alert-primary">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <i class="fas fa-check-circle fa-4x"></i>
+                        </div>
+                        <div class="col-md-10">
+                            <h5><strong>MQA — Module Transversal</strong></h5>
+                            <p class="mb-0">Le module <strong>Management Qualité (MQA)</strong> surveille et pilote tous les autres modules : gestion des NC, FAA, 8D, audits internes, revue de direction, AMDEC, tableau de bord des 22 KPI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intégrations entre Modules -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Intégrations Clés entre Modules</h2>
+
+            <div class="row g-4">
+                <!-- CMP ↔ EDV -->
+                <div class="col-lg-6">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <span class="integration-module bg-danger">CMP</span>
+                            <i class="fas fa-exchange-alt mx-3"></i>
+                            <span class="integration-module bg-info">EDV</span>
+                        </div>
+                        <div class="integration-body">
+                            <h6>Offre → Étude Technique</h6>
+                            <ul class="small mb-0">
+                                <li><strong>CMP crée</strong> l'offre commerciale (DAAAANNNN)</li>
+                                <li><strong>EDV reçoit</strong> la demande d'étude technique</li>
+                                <li><strong>EDV retourne</strong> fiche technique + prix de revient</li>
+                                <li><strong>CMP finalise</strong> l'offre avec marge commerciale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CMP ↔ MEC -->
+                <div class="col-lg-6">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <span class="integration-module bg-danger">CMP</span>
+                            <i class="fas fa-exchange-alt mx-3"></i>
+                            <span class="integration-module bg-success">MEC</span>
+                        </div>
+                        <div class="integration-body">
+                            <h6>Commande → Ordre de Fabrication</h6>
+                            <ul class="small mb-0">
+                                <li><strong>CMP valide</strong> commande client (AAAANNNN)</li>
+                                <li><strong>MEC crée</strong> OF avec même N° (NCD = OF, relation 1:1)</li>
+                                <li><strong>MEC suit</strong> production en temps réel</li>
+                                <li><strong>CMP notifie</strong> client lors livraison (BL)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEC ↔ AGS -->
+                <div class="col-lg-6">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <span class="integration-module bg-success">MEC</span>
+                            <i class="fas fa-exchange-alt mx-3"></i>
+                            <span class="integration-module bg-warning text-dark">AGS</span>
+                        </div>
+                        <div class="integration-body">
+                            <h6>Production → Achats & Stock</h6>
+                            <ul class="small mb-0">
+                                <li><strong>MEC lance</strong> OF avec nomenclature (BOM)</li>
+                                <li><strong>AGS vérifie</strong> disponibilité MP/Composants</li>
+                                <li><strong>AGS crée</strong> Demande d'Achat (DA) si besoin</li>
+                                <li><strong>AGS déclenche</strong> sortie stock vers production</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEC ↔ MNT -->
+                <div class="col-lg-6">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <span class="integration-module bg-success">MEC</span>
+                            <i class="fas fa-exchange-alt mx-3"></i>
+                            <span class="integration-module bg-secondary">MNT</span>
+                        </div>
+                        <div class="integration-body">
+                            <h6>Production → Maintenance</h6>
+                            <ul class="small mb-0">
+                                <li><strong>MEC utilise</strong> machines du parc (affectation OF)</li>
+                                <li><strong>MNT planifie</strong> maintenance préventive</li>
+                                <li><strong>MEC signale</strong> panne → MNT intervention curative</li>
+                                <li><strong>MNT calcule</strong> TAM (Taux Arrêt Machine) pour KPI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDV ↔ AGS -->
+                <div class="col-lg-6">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <span class="integration-module bg-info">EDV</span>
+                            <i class="fas fa-exchange-alt mx-3"></i>
+                            <span class="integration-module bg-warning text-dark">AGS</span>
+                        </div>
+                        <div class="integration-body">
+                            <h6>Étude → Nomenclature (BOM)</h6>
+                            <ul class="small mb-0">
+                                <li><strong>EDV définit</strong> nomenclature article (BOM)</li>
+                                <li><strong>AGS référence</strong> MP/Composants nécessaires</li>
+                                <li><strong>AGS évalue</strong> fournisseurs (notation 1-4)</li>
+                                <li><strong>EDV ajuste</strong> coût en fonction prix fournisseurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRH ↔ MEC -->
+                <div class="col-lg-6">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <span class="integration-module bg-primary">GRH</span>
+                            <i class="fas fa-exchange-alt mx-3"></i>
+                            <span class="integration-module bg-success">MEC</span>
+                        </div>
+                        <div class="integration-body">
+                            <h6>Ressources Humaines → Production</h6>
+                            <ul class="small mb-0">
+                                <li><strong>GRH gère</strong> compétences opérateurs (matrice)</li>
+                                <li><strong>MEC affecte</strong> opérateurs qualifiés aux postes</li>
+                                <li><strong>GRH suit</strong> présence/absences (TA)</li>
+                                <li><strong>MEC calcule</strong> temps réels par opérateur</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Règles de Numérotation -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Règles de Numérotation Clés</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0"><i class="fas fa-file-invoice me-2"></i>Offres Commerciales</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center text-danger">D+AAAA+NNNN</h3>
+                            <p class="text-center"><strong>Préfixe D obligatoire</strong></p>
+                            <hr>
+                            <p class="small mb-0"><strong>Exemple :</strong> D20240127 = Offre n°127 de l'année 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Commandes & OF</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center text-success">AAAANNNN</h3>
+                            <p class="text-center"><strong>8 chiffres (pas de préfixe)</strong></p>
+                            <hr>
+                            <p class="small mb-0"><strong>Exemple :</strong> 20240523 = Commande/OF n°523 de 2024<br><strong>⚠️ NCD = OF (relation 1:1 stricte)</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-hashtag me-2"></i>Entités Générales</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center text-primary">[PREFIX]-[AAAA]-[NNN]</h3>
+                            <p class="text-center"><strong>Standard pour autres entités</strong></p>
+                            <hr>
+                            <p class="small mb-0"><strong>Exemples :</strong><br>
+                            FAA-2024-015 (Fiche Action)<br>
+                            NC-2024-042 (Non-Conformité)<br>
+                            DA-2024-187 (Demande Achat)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 SOBECA - Société Ben Cheikh Abdelhakim | Kairouan, Tunisie | ISO 9001:2015</p>
+            <p class="mb-0 mt-2 small">Cahier des Charges ERP | Version 1.0</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

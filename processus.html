@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processus SMQ - ERP SOBECA</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-industry me-2"></i><strong>ERP SOBECA</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="modules.html">Modules</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="processus.html">Processus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kpi.html">KPI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="migration.html">Migration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active">Processus SMQ</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">
+                        <i class="fas fa-sitemap me-3"></i>Processus SMQ ISO 9001:2015
+                    </h1>
+                    <p class="lead mb-0">Cartographie complète des 7 processus métier SOBECA avec procédures et
+                        formulaires</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="stats-badge">
+                        <span class="stats-badge-number">7</span>
+                        <span class="stats-badge-label">Processus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vue d'ensemble -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #667eea;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>1</h3>
+                        <p>Processus Management</p>
+                        <small class="text-muted">MQA</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #3498db;">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>5</h3>
+                        <p>Processus Réalisation</p>
+                        <small class="text-muted">CMP, EDV, MEC, AGS</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #e74c3c;">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>2</h3>
+                        <p>Processus Support</p>
+                        <small class="text-muted">GRH, MNT</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #27ae60;">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>20+</h3>
+                        <p>Procédures</p>
+                        <small class="text-muted">PRD-XXX-NN</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>Navigation :</strong> Cliquez sur un processus ci-dessous pour voir ses détails complets
+                (procédures, formulaires, activités clés)
+            </div>
+        </div>
+    </section>
+
+    <!-- Processus Selector -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-3 mb-5">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="process-selector-card" data-process="mqa">
+                        <div class="process-selector-badge qualite">MQA</div>
+                        <h6>Management Qualité</h6>
+                        <small class="text-muted">Direction</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="process-selector-card" data-process="cmp">
+                        <div class="process-selector-badge ventes">CMP</div>
+                        <h6>Commercial</h6>
+                        <small class="text-muted">Réalisation</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="process-selector-card" data-process="edv">
+                        <div class="process-selector-badge etudes">EDV</div>
+                        <h6>Études</h6>
+                        <small class="text-muted">Réalisation</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="process-selector-card" data-process="mec">
+                        <div class="process-selector-badge production">MEC</div>
+                        <h6>Production</h6>
+                        <small class="text-muted">Réalisation</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="process-selector-card" data-process="ags">
+                        <div class="process-selector-badge achats">AGS</div>
+                        <h6>Achats & Stock</h6>
+                        <small class="text-muted">Réalisation</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="process-selector-card" data-process="grh">
+                        <div class="process-selector-badge rh">GRH</div>
+                        <h6>Ressources Humaines</h6>
+                        <small class="text-muted">Support</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="process-selector-card" data-process="mnt">
+                        <div class="process-selector-badge maintenance">MNT</div>
+                        <h6>Maintenance</h6>
+                        <small class="text-muted">Support</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Details Sections -->
+
+            <!-- MQA Process -->
+            <div id="process-mqa" class="process-detail-section" style="display: none;">
+                <div class="process-detail-header qualite">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2><i class="fas fa-check-circle me-3"></i>MQA — Management de la Qualité et Amélioration
+                            </h2>
+                            <p class="lead mb-0">Processus de Management (Direction)</p>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-white text-dark fs-6">7 Procédures</span>
+                            <span class="badge bg-white text-dark fs-6 ms-2">19 Formulaires</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-bullseye me-2"></i>Fiche d'Identité</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th width="40%">Code Processus</th>
+                                        <td><strong>MQA</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Type</th>
+                                        <td>Processus de Management</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pilote</th>
+                                        <td><strong>Hamdi GHEDIR</strong> (RMQ)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fréquence de revue</th>
+                                        <td>Annuelle + Revue de direction</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-primary"><i class="fas fa-target me-2"></i>Objectifs</h6>
+                                <ul class="mb-0">
+                                    <li>Maintenir et améliorer l'efficacité du SMQ</li>
+                                    <li>Assurer la conformité ISO 9001:2015</li>
+                                    <li>Piloter audits internes et revues de direction</li>
+                                    <li>Gérer NC et actions d'amélioration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs for MQA -->
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#mqa-procedures">
+                            <i class="fas fa-book me-1"></i>Procédures (7)
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mqa-formulaires">
+                            <i class="fas fa-file-alt me-1"></i>Formulaires (19)
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mqa-activites">
+                            <i class="fas fa-tasks me-1"></i>Activités Clés
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- Procédures Tab -->
+                    <div class="tab-pane fade show active" id="mqa-procedures">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Référence</th>
+                                                <th>Titre</th>
+                                                <th>Révision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>PRD-MQA-01</strong></td>
+                                                <td>Maîtrise des documents</td>
+                                                <td>Rév. 9 — 01/08/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>PRD-MQA-02</strong></td>
+                                                <td>Communication interne</td>
+                                                <td>En vigueur</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>PRD-MQA-03</strong></td>
+                                                <td>Audit interne</td>
+                                                <td>Rév. 11 — 01/08/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>PRD-MQA-05</strong></td>
+                                                <td>Actions d'amélioration</td>
+                                                <td>Rév. 10 — 23/10/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>PRD-MQA-06</strong></td>
+                                                <td>Maîtrise des produits non conformes</td>
+                                                <td>Rév. 9 — 01/08/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>PRD-MQA-07</strong></td>
+                                                <td>Analyse des risques processus SMQ</td>
+                                                <td>En vigueur</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>PRD-MQA-08</strong></td>
+                                                <td>Gestion des non-conformités</td>
+                                                <td>Rév. 00 — 24/10/2024</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulaires Tab -->
+                    <div class="tab-pane fade" id="mqa-formulaires">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-sm">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Référence</th>
+                                                <th>Titre</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>FOR-MQA-01</strong></td>
+                                                <td>Liste des documents et états de révision</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-02</strong></td>
+                                                <td>Tableaux de bord MQA</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-03</strong></td>
+                                                <td>Plan d'action</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-04</strong></td>
+                                                <td>Plan de communication interne</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-05</strong></td>
+                                                <td>Liste des documents d'origine externe</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-06</strong></td>
+                                                <td>Fiche diffusion documents</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-07</strong></td>
+                                                <td>Tableau de maîtrise des enregistrements qualité</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-09</strong></td>
+                                                <td>Revue de direction</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-10</strong></td>
+                                                <td>Planning d'audits internes</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-12</strong></td>
+                                                <td>Rapport d'audit interne</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-13</strong></td>
+                                                <td>Identification des parties intéressées et leurs exigences</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-14</strong></td>
+                                                <td>Programme d'audit</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-15</strong></td>
+                                                <td>Check-list VRS</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-16</strong></td>
+                                                <td>Attestation de sensibilisation</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-17/18</strong></td>
+                                                <td>AMDEC (Analyse risques)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-20/21</strong></td>
+                                                <td>Suivi rapport 8D</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-22</strong></td>
+                                                <td>Rapport de non-conformité</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-23</strong></td>
+                                                <td>Évaluation importance des processus pour planification audits</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>FOR-MQA-24</strong></td>
+                                                <td>Évaluation de l'action d'audit</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activités Tab -->
+                    <div class="tab-pane fade" id="mqa-activites">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="activity-card">
+                                    <h6><i class="fas fa-folder-open text-primary me-2"></i>Maîtrise des Documents</h6>
+                                    <ul class="small">
+                                        <li>Édition, diffusion et archivage documents SMQ</li>
+                                        <li>Contrôle des révisions et traçabilité</li>
+                                        <li>Gestion documents d'origine externe</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="activity-card">
+                                    <h6><i class="fas fa-clipboard-check text-success me-2"></i>Audit Interne</h6>
+                                    <ul class="small">
+                                        <li>Planification annuelle (pondération criticité)</li>
+                                        <li>Réalisation selon programme établi</li>
+                                        <li>Rapport d'audit et suivi des écarts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="activity-card">
+                                    <h6><i class="fas fa-exclamation-triangle text-warning me-2"></i>Gestion des NC &
+                                        Actions</h6>
+                                    <ul class="small">
+                                        <li>Détection et enregistrement NC (FOR-MQA-22)</li>
+                                        <li>Analyse causes (8D, Ishikawa, 5 Pourquoi)</li>
+                                        <li>Actions correctives/préventives (FAA)</li>
+                                        <li>Rapport 8D pour NC majeures</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="activity-card">
+                                    <h6><i class="fas fa-users text-info me-2"></i>Revue de Direction</h6>
+                                    <ul class="small">
+                                        <li>Bilan annuel indicateurs tous processus</li>
+                                        <li>Décisions stratégiques d'amélioration</li>
+                                        <li>Mise à jour objectifs qualité</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="activity-card">
+                                    <h6><i class="fas fa-shield-alt text-danger me-2"></i>Analyse des Risques (AMDEC)
+                                    </h6>
+                                    <ul class="small mb-0">
+                                        <li>Identification risques et opportunités par processus</li>
+                                        <li>Évaluation criticité (occurrence × gravité × détection)</li>
+                                        <li>Plans d'action de maîtrise des risques</li>
+                                        <li>Mise à jour annuelle</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CMP Process (generated dynamically) -->
+            <div id="process-cmp" class="process-detail-section" style="display: none;">
+                <!-- Content generated by JavaScript from processus-data.js -->
+            </div>
+
+            <!-- EDV Process (generated dynamically) -->
+            <div id="process-edv" class="process-detail-section" style="display: none;">
+                <!-- Content generated by JavaScript from processus-data.js -->
+            </div>
+
+            <!-- MEC Process (generated dynamically) -->
+            <div id="process-mec" class="process-detail-section" style="display: none;">
+                <!-- Content generated by JavaScript from processus-data.js -->
+            </div>
+
+            <!-- AGS Process (generated dynamically) -->
+            <div id="process-ags" class="process-detail-section" style="display: none;">
+                <!-- Content generated by JavaScript from processus-data.js -->
+            </div>
+
+            <!-- GRH Process (generated dynamically) -->
+            <div id="process-grh" class="process-detail-section" style="display: none;">
+                <!-- Content generated by JavaScript from processus-data.js -->
+            </div>
+
+            <!-- MNT Process (generated dynamically) -->
+            <div id="process-mnt" class="process-detail-section" style="display: none;">
+                <!-- Content generated by JavaScript from processus-data.js -->
+            </div>
+
+            <div id="no-process-selected" class="text-center py-5">
+                <i class="fas fa-hand-pointer fa-4x text-muted mb-3"></i>
+                <h4 class="text-muted">Sélectionnez un processus ci-dessus pour voir ses détails</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 SOBECA - Société Ben Cheikh Abdelhakim | Kairouan, Tunisie | ISO 9001:2015</p>
+            <p class="mb-0 mt-2 small">Cahier des Charges ERP | Version 1.0</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Process Data -->
+    <script src="processus-data.js"></script>
+
+    <!-- Process Selection Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const processCards = document.querySelectorAll('.process-selector-card');
+            const processSections = document.querySelectorAll('.process-detail-section');
+            const noSelection = document.getElementById('no-process-selected');
+
+            // Generate process sections dynamically (except MQA which is manually coded)
+            const processesToGenerate = ['cmp', 'edv', 'mec', 'ags', 'grh', 'mnt'];
+            processesToGenerate.forEach(processCode => {
+                const processData = processusData[processCode];
+                if (processData) {
+                    generateProcessSection(processCode, processData);
+                }
+            });
+
+            processCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const processId = this.dataset.process;
+
+                    // Remove active class from all cards
+                    processCards.forEach(c => c.classList.remove('active'));
+
+                    // Add active class to clicked card
+                    this.classList.add('active');
+
+                    // Hide all process sections and no-selection message
+                    processSections.forEach(section => section.style.display = 'none');
+                    noSelection.style.display = 'none';
+
+                    // Show selected process section
+                    const selectedSection = document.getElementById('process-' + processId);
+                    if (selectedSection) {
+                        selectedSection.style.display = 'block';
+
+                        // Smooth scroll to section
+                        selectedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+
+        function generateProcessSection(code, data) {
+            const existingSection = document.getElementById('process-' + code);
+            if (!existingSection) return;
+
+            const colorClass = {
+                'cmp': 'ventes',
+                'edv': 'etudes',
+                'mec': 'production',
+                'ags': 'achats',
+                'grh': 'rh',
+                'mnt': 'maintenance'
+            }[code];
+
+            const iconClass = {
+                'cmp': 'fas fa-chart-line',
+                'edv': 'fas fa-drafting-compass',
+                'mec': 'fas fa-cogs',
+                'ags': 'fas fa-shopping-cart',
+                'grh': 'fas fa-users',
+                'mnt': 'fas fa-wrench'
+            }[code];
+
+            // Parse formulaires (format: "FOR-XXX-NN : Titre")
+            const formulairesFormatted = data.formulaires.map(formStr => {
+                const parts = formStr.split(' : ');
+                return {
+                    ref: parts[0].trim(),
+                    titre: parts[1] ? parts[1].trim() : parts[0]
+                };
+            });
+
+            let html = `
+                <div class="process-detail-header ${colorClass}">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2><i class="${iconClass} me-3"></i>${data.code} — ${data.nom}</h2>
+                            <p class="lead mb-0">${data.type}</p>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-white text-dark fs-6">${data.procedures.length} Procédure${data.procedures.length > 1 ? 's' : ''}</span>
+                            <span class="badge bg-white text-dark fs-6 ms-2">${data.formulaires.length} Formulaire${data.formulaires.length > 1 ? 's' : ''}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-bullseye me-2"></i>Fiche d'Identité</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th width="40%">Code Processus</th>
+                                        <td><strong>${data.code}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Type</th>
+                                        <td>${data.type}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pilote</th>
+                                        <td><strong>${data.pilote}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Révision</th>
+                                        <td>${data.revision}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-primary"><i class="fas fa-target me-2"></i>Objectifs</h6>
+                                <ul class="mb-0">
+                                    ${data.objectifs.map(obj => `<li>${obj}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#${code}-procedures">
+                            <i class="fas fa-book me-1"></i>Procédures (${data.procedures.length})
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#${code}-formulaires">
+                            <i class="fas fa-file-alt me-1"></i>Formulaires (${data.formulaires.length})
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#${code}-activites">
+                            <i class="fas fa-tasks me-1"></i>Activités Clés (${data.activites.length})
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- Procédures Tab -->
+                    <div class="tab-pane fade show active" id="${code}-procedures">
+                        <div class="card">
+                            <div class="card-body">
+                                ${data.procedures.length > 0 ? `
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th style="width: 25%">Référence</th>
+                                                <th style="width: 50%">Titre</th>
+                                                <th style="width: 25%">Révision</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            ${data.procedures.map(proc => `
+                                            <tr>
+                                                <td><strong>${proc.ref}</strong></td>
+                                                <td>${proc.titre}</td>
+                                                <td>${proc.revision || 'En vigueur'}</td>
+                                            </tr>
+                                            `).join('')}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                ` : '<p class="text-muted mb-0">Aucune procédure documentée pour ce processus.</p>'}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulaires Tab -->
+                    <div class="tab-pane fade" id="${code}-formulaires">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-sm">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th style="width: 25%">Référence</th>
+                                                <th style="width: 75%">Titre</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            ${formulairesFormatted.map(form => `
+                                            <tr>
+                                                <td><strong>${form.ref}</strong></td>
+                                                <td>${form.titre}</td>
+                                            </tr>
+                                            `).join('')}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activités Tab -->
+                    <div class="tab-pane fade" id="${code}-activites">
+                        <div class="row g-4">
+                            ${data.activites.map(act => `
+                            <div class="col-md-6">
+                                <div class="activity-card">
+                                    <h6><i class="fas fa-${act.icone} text-${act.couleur} me-2"></i>${act.titre}</h6>
+                                    <ul class="small mb-0">
+                                        ${act.details.map(detail => `<li>${detail}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            existingSection.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

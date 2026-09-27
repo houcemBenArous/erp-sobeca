@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration - ERP SOBECA</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-industry me-2"></i><strong>ERP SOBECA</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="modules.html">Modules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="processus.html">Processus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kpi.html">KPI</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="migration.html">Migration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active">Migration</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">
+                        <i class="fas fa-exchange-alt me-3"></i>Stratégie de Migration
+                    </h1>
+                    <p class="lead mb-0">Plan de bascule SQL Server → PostgreSQL avec 18 393 commandes historiques</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="stats-badge">
+                        <span class="stats-badge-number">5</span>
+                        <span class="stats-badge-label">Phases</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vue d'ensemble -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="migration-stat-card">
+                        <div class="migration-stat-icon" style="background: #e74c3c;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>246</h3>
+                        <p>Tables Source</p>
+                        <small class="text-muted">SQL Server</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="migration-stat-card">
+                        <div class="migration-stat-icon" style="background: #27ae60;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>108</h3>
+                        <p>Tables Cible</p>
+                        <small class="text-muted">PostgreSQL</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="migration-stat-card">
+                        <div class="migration-stat-icon" style="background: #3498db;">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>18 393</h3>
+                        <p>Commandes</p>
+                        <small class="text-muted">Historique 2020-2024</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="migration-stat-card">
+                        <div class="migration-stat-icon" style="background: #f39c12;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>8-10</h3>
+                        <p>Semaines</p>
+                        <small class="text-muted">Durée Totale</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principes -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-shield-alt me-2"></i>5 Règles Absolues</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="rule-box">
+                                <div class="rule-number">1</div>
+                                <h6>Tests en environnement miroir</h6>
+                                <p class="small mb-0">Jamais migrer directement en production</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="rule-box">
+                                <div class="rule-number">2</div>
+                                <h6>Source en lecture seule</h6>
+                                <p class="small mb-0">Base SQL Server jamais modifiée (READ ONLY)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="rule-box">
+                                <div class="rule-number">3</div>
+                                <h6>Ordre de dépendances</h6>
+                                <p class="small mb-0">Référentiels avant transactions</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="rule-box">
+                                <div class="rule-number">4</div>
+                                <h6>Validation systématique</h6>
+                                <p class="small mb-0">Compter lignes + vérifier FK après chaque phase</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <div class="rule-box">
+                                <div class="rule-number">5</div>
+                                <h6>Conservation de l'ancienne base</h6>
+                                <p class="small mb-0">Garder SQL Server actif 3 mois minimum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les 5 Phases -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Plan de Migration en 5 Phases</h2>
+
+            <!-- Phase 1 -->
+            <div class="migration-phase-card mb-4">
+                <div class="phase-header phase-1">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3><i class="fas fa-search me-2"></i>Phase 1 — Analyse & Préparation</h3>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-white text-dark fs-6">Durée : 2-3 semaines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-tasks me-2 text-primary"></i>Tâches Principales</h5>
+                            <ul>
+                                <li><strong>Audit complet</strong> de la base SQL Server (246 tables)</li>
+                                <li><strong>Identification</strong> des anomalies et doublons</li>
+                                <li><strong>Nettoyage préalable</strong> :
+                                    <ul>
+                                        <li>5 articles orphelins dans <code>mouvement_stock</code></li>
+                                        <li>4 montants non numériques dans <code>commande_client.total_ht</code></li>
+                                        <li>Casse incohérente dans <code>type_operation</code></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Extraction</strong> des données métier critiques</li>
+                                <li><strong>Définition</strong> des règles de transformation</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-exclamation-triangle me-2 text-warning"></i>Points d'Attention</h5>
+                            <div class="alert alert-warning">
+                                <strong>Anomalies connues à traiter :</strong>
+                                <ul class="mb-0">
+                                    <li>5 articles orphelins (mouvements sans article)</li>
+                                    <li>4 montants HT non numériques</li>
+                                    <li>Casse incohérente : "entrée" vs "Entrée"</li>
+                                    <li>Tables <code>gmao</code> appartiennent à CONSOMED (ignorer)</li>
+                                </ul>
+                            </div>
+                            <div class="alert alert-info">
+                                <strong>TopSolid PDM vierge</strong><br>
+                                0 plan CAO → aucun plan EDV migrable
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="migration-phase-card mb-4">
+                <div class="phase-header phase-2">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3><i class="fas fa-database me-2"></i>Phase 2 — Création Base PostgreSQL</h3>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-white text-dark fs-6">Durée : 1 semaine</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-tasks me-2 text-success"></i>Tâches Principales</h5>
+                            <ul>
+                                <li><strong>Création schéma PostgreSQL</strong> complet (108 tables)</li>
+                                <li><strong>Import des référentiels de base</strong> :
+                                    <ul>
+                                        <li><code>article</code> (Articles + Matières premières)</li>
+                                        <li><code>client</code> (Clients actifs)</li>
+                                        <li><code>fournisseur</code> (Fournisseurs agréés)</li>
+                                        <li><code>machine</code> (Parc machines)</li>
+                                        <li><code>operateur</code> (Personnel production)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Validation</strong> des contraintes d'intégrité</li>
+                                <li><strong>Indexation</strong> des clés primaires/étrangères</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-table me-2 text-info"></i>Tables Prioritaires</h5>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Table PostgreSQL</th>
+                                            <th>Source SQL Server</th>
+                                            <th>Nb Lignes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><code>article</code></td><td>Article</td><td>~2000+</td></tr>
+                                        <tr><td><code>client</code></td><td>client</td><td>~500+</td></tr>
+                                        <tr><td><code>fournisseur</code></td><td>Fournisseur</td><td>~200+</td></tr>
+                                        <tr><td><code>machine</code></td><td>Excel MNT-23</td><td>~30</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="migration-phase-card mb-4">
+                <div class="phase-header phase-3">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3><i class="fas fa-sync-alt me-2"></i>Phase 3 — Migration Transactionnelle</h3>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-white text-dark fs-6">Durée : 2 semaines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-tasks me-2 text-info"></i>Données Transactionnelles</h5>
+                            <ul>
+                                <li><strong>18 393 Commandes Clients</strong> (2020-2024)
+                                    <ul>
+                                        <li>Historique complet avec dates, montants, statuts</li>
+                                        <li>Relation 1:1 avec Ordres de Fabrication (NCD = OF)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Ordres de Fabrication (OF)</strong>
+                                    <ul>
+                                        <li>Numérotation 8 chiffres : AAAANNNN</li>
+                                        <li>Traçabilité complète des exécutions</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Mouvements de Stock</strong>
+                                    <ul>
+                                        <li>4 dépôts : M1, M02, ML, DPF</li>
+                                        <li>Types : Entrée, Sortie, Transfert, Inventaire</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Bons de Commande Fournisseurs</strong></li>
+                                <li><strong>Fiches Techniques Produits</strong></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-filter me-2 text-warning"></i>Filtres & Transformations</h5>
+                            <div class="alert alert-info">
+                                <strong>Filtrage optionnel par société :</strong><br>
+                                3 tables contiennent une colonne <code>société</code> :
+                                <ul class="mb-0">
+                                    <li><code>commande_client</code></li>
+                                    <li><code>fiche_technique</code></li>
+                                    <li><code>mouvement_stock</code></li>
+                                </ul>
+                                Filtrer sur <code>société = 'SOBECA'</code> si données mixtes
+                            </div>
+                            <div class="alert alert-warning">
+                                <strong>Transformation des statuts :</strong><br>
+                                4 statuts SQL Server → 7 statuts ERP<br>
+                                <small>Annulé | En cours | Terminé | En attente → mapping détaillé dans ERP-12</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="migration-phase-card mb-4">
+                <div class="phase-header phase-4">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3><i class="fas fa-check-double me-2"></i>Phase 4 — Validation Métier</h3>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-white text-dark fs-6">Durée : 2-3 semaines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-tasks me-2 text-warning"></i>Tests & Validations</h5>
+                            <ul>
+                                <li><strong>Environnement miroir</strong> complet</li>
+                                <li><strong>Validation des 22 KPI</strong>
+                                    <ul>
+                                        <li>Recalcul sur données historiques</li>
+                                        <li>Comparaison avec Excel FOR-MQA-02</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Recette utilisateur par processus</strong>
+                                    <ul>
+                                        <li>RMQ : Audits, FAA, 8D, NC</li>
+                                        <li>Commercial : Offres, Commandes, Réclamations</li>
+                                        <li>Production : OF, Fiches suiveuses, Contrôle</li>
+                                        <li>Achats : BC fournisseurs, Réceptions, Stock</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Tests de charge</strong> (connexions simultanées)</li>
+                                <li><strong>Corrections et ajustements</strong></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-clipboard-check me-2 text-success"></i>Critères de Validation</h5>
+                            <div class="checklist">
+                                <div class="checklist-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>100% des commandes 2024 accessibles</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>Stock actuel cohérent (4 dépôts)</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>OF en cours visibles et modifiables</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>Traçabilité lot → pièce fonctionnelle</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>22 KPI calculables et cohérents</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>Aucune erreur FK (intégrité référentielle)</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>Temps de réponse < 2s par écran</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 5 -->
+            <div class="migration-phase-card mb-4">
+                <div class="phase-header phase-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3><i class="fas fa-rocket me-2"></i>Phase 5 — Mise en Production & Go-Live</h3>
+                        </div>
+                        <div class="col-lg-4 text-end">
+                            <span class="badge bg-white text-dark fs-6">Durée : 1 semaine + suivi 1 mois</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-tasks me-2 text-success"></i>Bascule Définitive</h5>
+                            <div class="timeline-vertical">
+                                <div class="timeline-v-item">
+                                    <div class="timeline-v-badge bg-warning">J-7</div>
+                                    <div class="timeline-v-content">
+                                        <h6>Préparation</h6>
+                                        <p class="small">Formation finale utilisateurs, planification arrêt, sauvegarde complète</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-v-item">
+                                    <div class="timeline-v-badge bg-danger">J-1</div>
+                                    <div class="timeline-v-content">
+                                        <h6>Gel de l'ancienne base</h6>
+                                        <p class="small">Plus aucune saisie dans SQL Server après 17h</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-v-item">
+                                    <div class="timeline-v-badge bg-info">J0 - Nuit</div>
+                                    <div class="timeline-v-content">
+                                        <h6>Migration delta finale</h6>
+                                        <p class="small">Import des saisies J-1 (17h → minuit)</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-v-item">
+                                    <div class="timeline-v-badge bg-success">J0 - 8h</div>
+                                    <div class="timeline-v-content">
+                                        <h6>Démarrage nouvel ERP</h6>
+                                        <p class="small">Tous les utilisateurs basculent sur PostgreSQL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><i class="fas fa-user-friends me-2 text-primary"></i>Support Post-Migration</h5>
+                            <ul>
+                                <li><strong>Semaine 1</strong> : Support sur site (RMQ + équipe dev)</li>
+                                <li><strong>Semaine 2-4</strong> : Support à distance quotidien</li>
+                                <li><strong>Mois 2-3</strong> : Support hebdomadaire</li>
+                            </ul>
+                            <h5 class="mt-4"><i class="fas fa-book me-2 text-info"></i>Documentation</h5>
+                            <ul>
+                                <li>Guides utilisateur par module</li>
+                                <li>Procédures de sauvegarde PostgreSQL</li>
+                                <li>Guide administrateur (backup/restore)</li>
+                                <li>FAQ problèmes courants</li>
+                            </ul>
+                            <div class="alert alert-success mt-3">
+                                <strong><i class="fas fa-shield-alt me-2"></i>Sécurité :</strong><br>
+                                Ancienne base SQL Server conservée <strong>3 mois minimum</strong> en READ ONLY pour consultation/audit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modules Hors Périmètre -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="mb-4"><i class="fas fa-info-circle me-2 text-info"></i>Modules Créés *From Scratch* (Pas de Migration)</h3>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="fas fa-wrench me-2"></i>MNT - Maintenance</h5>
+                            <p class="card-text"><strong>Aucune table SQL Server</strong></p>
+                            <p class="small mb-0">Gestion historique sur Excel uniquement. Import initial depuis FOR-MNT-23 (machines) et FOR-MNT-24 (instruments).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="fas fa-users me-2"></i>GRH - Ressources Humaines</h5>
+                            <p class="card-text"><strong>5 tables GRH vides</strong></p>
+                            <p class="small mb-0">Module démarre vide. Import effectifs au go-live via FOR-GRH-05 (25 personnes).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="fas fa-check-circle me-2"></i>MQA - Management Qualité</h5>
+                            <p class="card-text"><strong>Module inexistant dans ancienne base</strong></p>
+                            <p class="small mb-0">Module transversal créé de zéro. Démarrage avec audits et FAA 2026 uniquement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 SOBECA - Société Ben Cheikh Abdelhakim | Kairouan, Tunisie | ISO 9001:2015</p>
+            <p class="mb-0 mt-2 small">Cahier des Charges ERP | Version 1.0</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

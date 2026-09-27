@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP SOBECA - Accueil</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-industry me-2"></i><strong>ERP SOBECA</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="modules.html">Modules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="processus.html">Processus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kpi.html">KPI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="migration.html">Migration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Cahier des Charges<br><span class="text-gradient">ERP
+                            SOBECA</span></h1>
+                    <p class="lead mb-4">
+                        Solution ERP complète pour digitaliser le Système de Management de la Qualité (SMQ)
+                        conforme ISO 9001:2015
+                    </p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">8</span>
+                            <span class="hero-stat-label">Modules</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">22</span>
+                            <span class="hero-stat-label">KPI Actifs</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">108</span>
+                            <span class="hero-stat-label">Tables</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-cogs fa-10x text-white opacity-25"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos SOBECA -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">À propos de SOBECA</h2>
+                    <p class="section-subtitle">Société Ben Cheikh Abdelhakim</p>
+                    <p class="lead">PME industrielle de <strong>25 personnes</strong> spécialisée dans la fabrication de
+                        pièces mécaniques de précision et engrenages depuis 2010.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i><strong>Localisation
+                                :</strong> Kairouan, Tunisie</li>
+                        <li class="mb-2"><i class="fas fa-certificate text-primary me-2"></i><strong>Certification
+                                :</strong> ISO 9001:2015</li>
+                        <li class="mb-2"><i class="fas fa-industry text-primary me-2"></i><strong>Surface :</strong> 1
+                            800 m²</li>
+                        <li class="mb-2"><i class="fas fa-users text-primary me-2"></i><strong>Effectif :</strong> 25
+                            collaborateurs</li>
+                        <li class="mb-2"><i class="fas fa-cog text-primary me-2"></i><strong>Activité :</strong> Usinage
+                            de précision, engrenages, sous-traitance mécanique</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-bullseye text-primary me-2"></i>Objectif du Projet
+                            </h5>
+                            <p>Remplacer le système existant (SQL Server) par un ERP moderne sous PostgreSQL intégrant :
+                            </p>
+                            <ul>
+                                <li>Gestion complète du SMQ ISO 9001:2015</li>
+                                <li>Traçabilité totale de la production</li>
+                                <li>Tableau de bord KPI en temps réel</li>
+                                <li>Workflows automatisés</li>
+                                <li>Migration de 18 393 commandes historiques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Principale - Cartes Cliquables -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Explorez le Projet</h2>
+                <p class="section-subtitle">Cliquez sur une section pour voir les détails complets</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Carte Modules -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="modules.html" class="text-decoration-none">
+                        <div class="card card-nav h-100">
+                            <div class="card-body text-center">
+                                <div class="card-icon-large mx-auto mb-3"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-cubes fa-3x"></i>
+                                </div>
+                                <h3 class="card-title">Modules ERP</h3>
+                                <p class="card-text">Découvrez les <strong>8 modules</strong> : Qualité, Commercial,
+                                    Production, Études, Achats, RH, Maintenance, Finance</p>
+                                <span class="badge bg-primary">8 Modules</span>
+                                <span class="badge bg-secondary">75+ Formulaires</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Carte Processus -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="processus.html" class="text-decoration-none">
+                        <div class="card card-nav h-100">
+                            <div class="card-body text-center">
+                                <div class="card-icon-large mx-auto mb-3"
+                                    style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-sitemap fa-3x"></i>
+                                </div>
+                                <h3 class="card-title">Processus SMQ</h3>
+                                <p class="card-text">Cartographie complète des <strong>processus ISO 9001:2015</strong>
+                                    avec workflows et procédures</p>
+                                <span class="badge bg-danger">7 Processus</span>
+                                <span class="badge bg-secondary">20+ Procédures</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Carte KPI -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="kpi.html" class="text-decoration-none">
+                        <div class="card card-nav h-100">
+                            <div class="card-body text-center">
+                                <div class="card-icon-large mx-auto mb-3"
+                                    style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-chart-line fa-3x"></i>
+                                </div>
+                                <h3 class="card-title">Indicateurs KPI</h3>
+                                <p class="card-text">Tableau de bord avec <strong>22 KPI actifs</strong> pour piloter la
+                                    performance et les objectifs qualité</p>
+                                <span class="badge bg-info">22 KPI</span>
+                                <span class="badge bg-secondary">5 Axes Qualité</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Carte Migration -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="migration.html" class="text-decoration-none">
+                        <div class="card card-nav h-100">
+                            <div class="card-body text-center">
+                                <div class="card-icon-large mx-auto mb-3"
+                                    style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                    <i class="fas fa-exchange-alt fa-3x"></i>
+                                </div>
+                                <h3 class="card-title">Migration</h3>
+                                <p class="card-text">Stratégie de migration <strong>SQL Server → PostgreSQL</strong>
+                                    avec 18 393 commandes historiques</p>
+                                <span class="badge bg-success">5 Phases</span>
+                                <span class="badge bg-secondary">246 → 108 Tables</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Carte Architecture -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="architecture.html" class="text-decoration-none">
+                        <div class="card card-nav h-100">
+                            <div class="card-body text-center">
+                                <div class="card-icon-large mx-auto mb-3"
+                                    style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <i class="fas fa-project-diagram fa-3x"></i>
+                                </div>
+                                <h3 class="card-title">Architecture</h3>
+                                <p class="card-text">Flux de données entre modules, intégrations et <strong>schéma
+                                        technique global</strong></p>
+                                <span class="badge bg-warning">Flux de Données</span>
+                                <span class="badge bg-secondary">Intégrations</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Carte Documentation -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-nav h-100 opacity-75">
+                        <div class="card-body text-center">
+                            <div class="card-icon-large mx-auto mb-3"
+                                style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <i class="fas fa-file-alt fa-3x"></i>
+                            </div>
+                            <h3 class="card-title">Documentation</h3>
+                            <p class="card-text">Cahier des charges complet en <strong>16 fichiers Markdown</strong>
+                                avec spécifications détaillées</p>
+                            <span class="badge bg-secondary">16 Documents</span>
+                            <span class="badge bg-secondary">3000+ Lignes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chiffres Clés -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Chiffres Clés du Projet</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-box">
+                        <span class="stats-number">8</span>
+                        <span class="stats-label">Modules ERP</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-box">
+                        <span class="stats-number">22</span>
+                        <span class="stats-label">KPI Actifs</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-box">
+                        <span class="stats-number">108</span>
+                        <span class="stats-label">Tables PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-box">
+                        <span class="stats-number">18393</span>
+                        <span class="stats-label">Commandes Historiques</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 SOBECA - Société Ben Cheikh Abdelhakim | Kairouan, Tunisie | ISO 9001:2015</p>
+            <p class="mb-0 mt-2 small">Cahier des Charges ERP | Version 1.0 | PostgreSQL + DT (Dinar Tunisien) + TVA 19%
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
