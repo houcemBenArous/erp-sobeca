@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - ERP SOBECA</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-industry me-2"></i><strong>ERP SOBECA</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="modules.html">Modules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="processus.html">Processus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kpi.html">KPI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="migration.html">Migration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active">Documentation</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">
+                        <i class="fas fa-file-alt me-3"></i>Documentation Complète
+                    </h1>
+                    <p class="lead mb-0">Guides, spécifications et ressources du projet ERP SOBECA</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="stats-badge">
+                        <span class="stats-badge-number">16</span>
+                        <span class="stats-badge-label">Documents</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vue d'ensemble -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #667eea;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>16</h3>
+                        <p>Fichiers Markdown</p>
+                        <small class="text-muted">Cahier des charges</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #3498db;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>3000+</h3>
+                        <p>Lignes de Spécifications</p>
+                        <small class="text-muted">Détails techniques</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #e74c3c;">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>108</h3>
+                        <p>Tables PostgreSQL</p>
+                        <small class="text-muted">Modèle de données</small>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-stat-card">
+                        <div class="process-stat-icon" style="background: #27ae60;">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>40+</h3>
+                        <p>Questions à Valider</p>
+                        <small class="text-muted">Points à trancher</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Sections -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Guides Utilisateur -->
+            <div class="mb-5">
+                <h2 class="section-title mb-4">
+                    <i class="fas fa-book-reader text-primary me-2"></i>Guides Utilisateur
+                </h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-file-alt text-info me-2"></i>README.md
+                                </h5>
+                                <p class="card-text">Documentation principale du site web avec instructions d'utilisation et maintenance.</p>
+                                <ul class="small">
+                                    <li>Structure du site multi-pages</li>
+                                    <li>Utilisation et navigation</li>
+                                    <li>Génération dynamique des processus</li>
+                                    <li>Dépannage et maintenance</li>
+                                </ul>
+                                <a href="README.md" class="btn btn-sm btn-outline-primary" download>
+                                    <i class="fas fa-download me-1"></i>Télécharger
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-clipboard-check text-success me-2"></i>Guide Validation Responsables
+                                </h5>
+                                <p class="card-text">Guide complet pour la réunion de validation avec les responsables de processus.</p>
+                                <ul class="small">
+                                    <li>Feuilles de validation par processus</li>
+                                    <li>Questions bloquantes à trancher</li>
+                                    <li>Conseils pour la réunion</li>
+                                    <li>Email type de convocation</li>
+                                </ul>
+                                <a href="Guide-Validation-Responsables.md" class="btn btn-sm btn-outline-success" download>
+                                    <i class="fas fa-download me-1"></i>Télécharger
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guides Techniques -->
+            <div class="mb-5">
+                <h2 class="section-title mb-4">
+                    <i class="fas fa-code text-primary me-2"></i>Guides Techniques
+                </h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-rocket text-warning me-2"></i>Guide Hébergement Vercel
+                                </h5>
+                                <p class="card-text">Instructions complètes pour déployer le site sur Vercel.</p>
+                                <ul class="small">
+                                    <li>Création compte GitHub</li>
+                                    <li>Configuration dépôt Git</li>
+                                    <li>Déploiement sur Vercel</li>
+                                    <li>Mises à jour futures</li>
+                                </ul>
+                                <a href="GUIDE-HEBERGEMENT-VERCEL.md" class="btn btn-sm btn-outline-warning" download>
+                                    <i class="fas fa-download me-1"></i>Télécharger
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-database text-danger me-2"></i>Fichier de Données Processus
+                                </h5>
+                                <p class="card-text">Fichier JavaScript contenant toutes les données des 7 processus SMQ.</p>
+                                <ul class="small">
+                                    <li>Données structurées JSON</li>
+                                    <li>7 processus complets</li>
+                                    <li>Procédures et formulaires</li>
+                                    <li>Facilite les modifications</li>
+                                </ul>
+                                <a href="processus-data.js" class="btn btn-sm btn-outline-danger" download>
+                                    <i class="fas fa-download me-1"></i>Télécharger
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cahier des Charges -->
+            <div class="mb-5">
+                <h2 class="section-title mb-4">
+                    <i class="fas fa-folder-open text-primary me-2"></i>Cahier des Charges Complet
+                </h2>
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Emplacement :</strong> Les fichiers Markdown détaillés du cahier des charges se trouvent dans le dossier parent
+                    <code>../cahier-de-charge-md/</code>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Processus -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0"><i class="fas fa-sitemap me-2"></i>Processus SMQ</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2">📄 <code>03-processus-MQA.md</code> - Management Qualité</li>
+                                    <li class="mb-2">📄 <code>04-processus-CMP.md</code> - Commercial</li>
+                                    <li class="mb-2">📄 <code>05-processus-MEC.md</code> - Production</li>
+                                    <li class="mb-2">📄 <code>06-processus-EDV.md</code> - Études</li>
+                                    <li class="mb-2">📄 <code>07-processus-AGS.md</code> - Achats & Stock</li>
+                                    <li class="mb-2">📄 <code>08-processus-GRH.md</code> - Ressources Humaines</li>
+                                    <li class="mb-2">📄 <code>09-processus-MNT.md</code> - Maintenance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modules ERP -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-cubes me-2"></i>Modules ERP</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2">📄 <code>ERP-01-module-CRM.md</code> - Commercial</li>
+                                    <li class="mb-2">📄 <code>ERP-02-module-EDV.md</code> - Études</li>
+                                    <li class="mb-2">📄 <code>ERP-03-module-PRODUCTION.md</code> - Production</li>
+                                    <li class="mb-2">📄 <code>ERP-04-module-ACHATS-STOCK.md</code> - Achats</li>
+                                    <li class="mb-2">📄 <code>ERP-05-module-QUALITE.md</code> - Qualité</li>
+                                    <li class="mb-2">📄 <code>ERP-06-module-GRH.md</code> - RH</li>
+                                    <li class="mb-2">📄 <code>ERP-07-module-MAINTENANCE.md</code> - Maintenance</li>
+                                    <li class="mb-2">📄 <code>ERP-13-module-FINANCE.md</code> - Finance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spécifications Techniques -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0"><i class="fas fa-cog me-2"></i>Spécifications Techniques</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2">📄 <code>ERP-08-indicateurs-kpi.md</code> - 22 KPI</li>
+                                    <li class="mb-2">📄 <code>ERP-09-regles-metier.md</code> - Règles métier</li>
+                                    <li class="mb-2">📄 <code>ERP-10-modele-donnees.md</code> - 108 tables DDL</li>
+                                    <li class="mb-2">📄 <code>ERP-11-mapping-base-existante.md</code> - Mapping 246→108</li>
+                                    <li class="mb-2">📄 <code>ERP-12-migration.md</code> - Plan migration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Synthèses et Questions -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white">
+                                <h5 class="mb-0"><i class="fas fa-question-circle me-2"></i>Synthèses et Validation</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2">📄 <code>00-synthese-erp.md</code> - Vue d'ensemble</li>
+                                    <li class="mb-2">📄 <code>00-acronymes-et-formulaires.md</code> - Inventaire</li>
+                                    <li class="mb-2">📄 <code>BILAN-VALIDATION.md</code> - Validation base</li>
+                                    <li class="mb-2">📄 <code>ERP-14-questions-a-valider.md</code> - Questions ouvertes</li>
+                                    <li class="mb-2">📄 <code>SUIVI-VERIFICATION-FORMULAIRES.md</code> - Suivi validations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liens Utiles -->
+            <div>
+                <h2 class="section-title mb-4">
+                    <i class="fas fa-link text-primary me-2"></i>Liens Utiles
+                </h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fab fa-github fa-3x text-dark mb-3"></i>
+                                <h5 class="card-title">Dépôt GitHub</h5>
+                                <p class="card-text small">Code source du site web</p>
+                                <a href="https://github.com/houcemBenArous/erp-sobeca" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fas fa-external-link-alt me-1"></i>Voir sur GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">Hébergement Vercel</h5>
+                                <p class="card-text small">Site en ligne 24/7</p>
+                                <a href="https://vercel.com" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt me-1"></i>Voir sur Vercel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-info-circle fa-3x text-info mb-3"></i>
+                                <h5 class="card-title">ISO 9001:2015</h5>
+                                <p class="card-text small">Norme de référence</p>
+                                <a href="https://www.iso.org/iso-9001-quality-management.html" target="_blank" class="btn btn-sm btn-info">
+                                    <i class="fas fa-external-link-alt me-1"></i>En savoir plus
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 SOBECA - Société Ben Cheikh Abdelhakim | Kairouan, Tunisie | ISO 9001:2015</p>
+            <p class="mb-0 mt-2 small">Cahier des Charges ERP | Version 1.0</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
