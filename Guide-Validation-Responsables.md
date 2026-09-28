@@ -18,47 +18,66 @@ Double-cliquer sur : processus.html
 
 ### Navigation
 1. **Cliquer** sur une carte de processus (MQA, CMP, etc.)
-2. **Explorer** les 3 onglets : Procédures / Formulaires / Activités
+2. **Explorer** les 6 onglets : Déroulé / Documents / Flux / Formulaires / Activités / Indicateurs
 3. **Valider** avec le responsable de processus
 
 ---
 
 ## 📊 Les 7 Processus à Valider
 
+> **Source des chiffres** : `cahier-de-charge-md/11-documents-reference.md` (inventaire des documents) et `ERP-08` §8.1 (22 KPI actifs).
+> Répartition officielle : **MQA 4 + CMP 3 + EDV 3 + MEC 4 + AGS 2 + GRH 3 + MNT 3 = 22 KPI actifs** (hors 3 KPI CAT désactivés).
+> Finance est le 9ᵉ module ERP, hors périmètre SMQ : il ne porte aucun KPI.
+
 ### 1️⃣ MQA - Management de la Qualité ✅
 - **Pilote** : Hamdi GHEDIR (RMQ)
-- **Contenu** : 7 procédures, 19 formulaires, 5 activités
+- **Contenu** : 7 procédures, 2 instructions, 19 formulaires, 5 activités, 4 KPI
 - **À valider** : Maîtrise documents, audits internes, NC, AMDEC, revue direction
+- ⚠️ Fiche PCS-MQA incomplète : ni synoptique, ni parties intéressées, ni flux d'entrées/sorties (la page affiche « non documenté »)
 
 ### 2️⃣ CMP - Commercial et Planification ✅
 - **Pilote** : Talel YAHYAOUI
-- **Contenu** : 1 procédure, 16 formulaires, 5 activités
+- **Contenu** : 1 procédure, 12 formulaires, 5 activités, 3 KPI
 - **À valider** : Circuit offre→commande→OF, réclamations, satisfaction client
+- ⚠️ Nombre de signatures sur la fiche technique (FOR-CMP-14) non déductible du SMQ
 
-### 3️⃣ EDV - Études et Développement ✅
-- **Pilote** : Issameddine BEN ALI
-- **Contenu** : 1 procédure, 9 formulaires, 4 activités
-- **À valider** : Études techniques, nomenclatures, calcul prix, contrôle final
-
-### 4️⃣ MEC - Production Mécanique ✅
+### 3️⃣ MEC - Production Mécanique ✅
 - **Pilote** : Slim GALLS
-- **Contenu** : 2 procédures, 10 formulaires, 4 activités
+- **Contenu** : 2 instructions, 1 plan qualité (aucune procédure PRD), 6 formulaires, 4 activités, 4 KPI
 - **À valider** : Fabrication, auto-contrôle, traçabilité, relation NCD/OF
+- ⚠️ Relation NCD = OF 1:1 stricte, mais livraisons partielles (2-3 BL par NCD)
+- ⚠️ La fiche PCS-MEC ne liste que 2 indicateurs, alors que le registre officiel ERP-08 §8.1 en compte 4 (TRD et TRS manquants)
+
+### 4️⃣ EDV - Études et Développement ✅
+- **Pilote** : Issameddine BEN ALI
+- **Contenu** : 3 procédures, 6 formulaires, 4 activités, 3 KPI
+- **À valider** : Études techniques, nomenclatures, calcul prix, contrôle final
+- ⚠️ TopSolid PDM vierge (0 plan) : aucun plan migrable
 
 ### 5️⃣ AGS - Achats et Gestion des Stocks ✅
 - **Pilote** : Ghassen BEN CHEIKH
-- **Contenu** : 3 procédures, 20 formulaires, 5 activités
+- **Contenu** : 1 instruction, 1 plan qualité (aucune procédure PRD), 15 formulaires, 5 activités, 2 KPI
 - **À valider** : Circuit DA→BC→BR, 4 dépôts (M1/M02/ML/DPF), évaluation fournisseurs
+- ⚠️ La fiche PCS-AGS ne comporte aucune section « flux d'entrées / sorties » (la page affiche « non documenté »)
+- ⚠️ RG-AGS-12 stocke « huiles et lubrifiants uniquement en **M3** » alors que **M3 n'existe pas** (M1, M02, ML, DPF)
+- ⚠️ Barème notation fournisseur contradictoire : 0-4 (max 20) en base vs « max 15 / barème 0-3 » en RG-AGS-06
+- ⚠️ Code KPI : « TCC » (ERP-08) vs « TNCC » (fiche processus AGS)
 
 ### 6️⃣ GRH - Gestion des Ressources Humaines ✅
 - **Pilote** : Responsable GRH
-- **Contenu** : 2 procédures, 5 formulaires, 4 activités
-- **À valider** : Gestion 25 collaborateurs, compétences, formation, absences
+- **Contenu** : 2 procédures, 19 formulaires, 5 activités, 3 KPI
+- **À valider** : Compétences, formation, absences, recrutement
+- ⚠️ La fiche PCS-GRH ne liste pas les parties intéressées (renvoi à la matrice FOR-MQA-13)
+- ⚠️ **Effectif contradictoire** : 25 (majorité des documents) vs 47 (registre FOR-GRH-05) — à arbitrer
+- ⚠️ Module créé de zéro : les 5 tables GRH de la base sont vides
+- ⚠️ PCS-GRH, PRD-GRH-01 et PRD-GRH-02 restent « à vérifier »
 
 ### 7️⃣ MNT - Maintenance ✅
 - **Pilote** : Mohamed Ali KHALFAOUI
-- **Contenu** : 2 procédures, 25 formulaires, 5 activités
+- **Contenu** : 3 procédures, 4 instructions, 16 formulaires, 5 activités, 3 KPI
 - **À valider** : Préventive/curative, parc machines, étalonnage
+- ⚠️ Le KPI TRP est défini de trois façons différentes dans le cahier (moyenne semestrielle §9.5, mensuelle §9.10, trimestrielle ERP-08 §8.1) — ERP-08 fait foi
+- ⚠️ Module créé de zéro : la table `gmao` appartient à CONSOMED, rien n'est migrable
 
 ---
 
@@ -66,15 +85,30 @@ Double-cliquer sur : processus.html
 
 Pour chaque processus, valider :
 
-### 📘 Procédures
-- [ ] Toutes les procédures métier sont listées
-- [ ] Les révisions sont à jour
+### 🗺️ Déroulé (synoptique)
+- [ ] Les étapes du synoptique sont dans le bon ordre
+- [ ] Les responsabilités par étape (Qui) sont correctes
+- [ ] Les documents cités à chaque étape sont les bons
+
+### 🔄 Flux
+- [ ] Les entrées du processus sont complètes
+- [ ] Les sorties du processus sont complètes
+- [ ] Les processus amont / aval sont corrects
+
+### 📘 Documents
+- [ ] Toutes les procédures, instructions et plans qualité sont listés
 - [ ] Les titres sont corrects
+- [ ] Les documents manquants sont signalés (ex. MEC et AGS n'ont aucune procédure PRD)
 
 ### 📄 Formulaires
 - [ ] Tous les documents de travail sont inventoriés
 - [ ] Les numérotations FOR-XXX-NN sont correctes
 - [ ] Aucun formulaire manquant
+
+### 📈 Indicateurs
+- [ ] Les KPI du processus sont corrects
+- [ ] Les fréquences de calcul sont confirmées (ERP-08 §8.1 fait foi)
+- [ ] Les formules et responsables de calcul sont validés
 
 ### ⚙️ Activités Clés
 - [ ] Le workflow correspond à la réalité terrain
@@ -135,8 +169,16 @@ Ces questions nécessitent une réponse **avant le développement** :
 **Date de validation** : __ / __ / 2026  
 **Responsable présent** : ___________________________
 
-#### Procédures
-- [ ] Complètes
+#### Déroulé (synoptique)
+- [ ] Conforme
+- [ ] Corrections étapes : ______________________________
+
+#### Flux
+- [ ] Entrées / Sorties conformes
+- [ ] Corrections : ___________________________________
+
+#### Documents
+- [ ] Complets
 - [ ] Corrections : ___________________________________
 
 #### Formulaires
@@ -147,6 +189,9 @@ Ces questions nécessitent une réponse **avant le développement** :
 #### Activités Clés
 - [ ] Conformes à la réalité
 - [ ] Corrections workflow : __________________________
+
+#### Indicateurs
+- [ ] KPI, fréquences et formules validés
 
 #### Validations
 - [ ] **Processus validé** par le responsable
@@ -163,17 +208,19 @@ Ces questions nécessitent une réponse **avant le développement** :
 
 1. **Ouvrir** `processus.html` sur écran partagé/projecteur
 2. **Cliquer** sur le processus à présenter
-3. **Parcourir** les 3 onglets avec le responsable
+3. **Parcourir** les 6 onglets avec le responsable (Déroulé → Documents → Flux → Formulaires → Activités → Indicateurs)
 4. **Noter** les corrections sur la feuille de validation
 5. **Passer** au processus suivant
 
 ### Pour le responsable
 
 1. **Écouter** la présentation du processus
-2. **Vérifier** que toutes les procédures/formulaires sont listés
-3. **Confirmer** que le workflow (activités) correspond au terrain
-4. **Signaler** les corrections nécessaires
-5. **Signer** la feuille de validation
+2. **Vérifier** que le déroulé (synoptique) correspond au terrain
+3. **Vérifier** que les procédures/instructions/plans qualité et formulaires sont listés
+4. **Confirmer** les flux d'entrées / sorties et les parties intéressées
+5. **Confirmer** les KPI, leurs fréquences et leurs formules
+6. **Signaler** les corrections nécessaires
+7. **Signer** la feuille de validation
 
 ### Impression PDF (si besoin)
 
@@ -252,7 +299,8 @@ Ces questions nécessitent une réponse **avant le développement** :
 
 ### Pour les responsables
 - ✅ **Visuel** : navigation intuitive, design moderne
-- ✅ **Complet** : toutes les procédures/formulaires/activités
+- ✅ **Complet** : déroulé, flux, documents, formulaires, activités et indicateurs
+- ✅ **Fidèle** : contenu issu des fiches processus `03-…` à `09-…`, divergences signalées
 - ✅ **Structuré** : organisation claire par onglets
 - ✅ **Rapide** : accès direct à son processus
 
